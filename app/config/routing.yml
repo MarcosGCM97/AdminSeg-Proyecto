@@ -1,0 +1,11 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+    
+app_product:
+    resource: "@AppBundle/Resources/config/routing/product.yml"
+    prefix:   /product
+    
+app_category:
+    resource: "@AppBundle/Resources/config/routing/category.yml"
+    prefix:   /category   

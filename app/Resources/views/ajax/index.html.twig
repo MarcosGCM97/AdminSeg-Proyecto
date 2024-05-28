@@ -1,0 +1,36 @@
+
+{% extends 'base.html.twig' %}
+{% block home %}
+{% block javascript %}
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
+    <script src="{{ asset("js/ajax_name.js") }}"></script>
+    <script src="{{ asset("js/ajax_category.js") }}"></script>
+
+{% endblock %}
+{% block content %}
+
+    <center>
+        <h1>Listado de Zapatillas</h1>
+        <h1>Ajax Post</h1>
+        <form>
+            <label for="input_text">Search by name</label>
+            <input id="input_text" type="text" placeholder="Green, Blue, Yellow...">
+        </form>
+        <form id="form_categories">
+            <label>Search by category</label>
+            {{ form_start(formProduct) }}
+            {{ form_widget(formProduct) }}
+            {{ form_end(formProduct) }}
+        </form>
+        <div id="resultado2">
+            {% for product in products %}
+                <center>
+                    <img src="{{ product.image }}" alt="{{ product.name }}" width="200">
+                    <p>{{ product.name }} - tipo: {{ product.category.name }}<img src="{{ product.category.icon }}" alt="{{ product.name }}" width="30"></p>
+                </center>
+            {% endfor %}</div>
+    </center>
+
+{% endblock %}
+{% endblock %}
