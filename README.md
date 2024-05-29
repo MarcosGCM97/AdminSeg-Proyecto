@@ -1,12 +1,38 @@
+Buenos dias,
+primero que nada quiero agradecerles por la oportunidad, 
+esta fue una experiencia en la cual aprendi mucho y son tecnologias las cuales me gustaria seguir aprendiendo.
+
+Ahora sobre el proyecto,
+He logrado finalizar todos los puntos de las actividades correspondientes con la ayuda de la documentacion de Symfony 3.x,
+la cual me parece bastante abarcativa e interesante. Espero este proyecto cuampla con sus expectativas y a continuacion
+les dejo algunos puntos que les interesara tener en cuenta:
+
+USUARIO
+Deje creado un usuario con el mail ficticio 'adminseg@mail.com' y contraseña '123456'
+con el rol de 'ROLE_ADMIN' para que pueda ingresar a las secciones privadas de la pagina.
+
+BASE DE DATOS
+la base de datos esta cargada en mi repositorio de Github baje el nombre de 'ADMINSEG-DB',
+archivo el cual debe tener la tabla creada con los productos ya a su disposicion,
+es la primera vez que exporto una base de datos, si tiene problemas con ella no dude en avisarme.
+
+ESTILOS Css
+Sobre este tema, vera que me anime a jugar un poco con la implementacion de bootstrap en este proyecto
+y no obtuve el resultado que esperaba, al momento de implementar estilos al componente creado desde js 
+fue lo que no pude resolver, pero lo cual ya me estoy poniendo a investigar;
+aun asi creo que quedo prolijo a la vista.
+
+
+Saludos.
+
+
+
 Symfony Standard Edition
 ========================
 
 **WARNING**: This distribution does not support Symfony 4. See the
 [Installing & Setting up the Symfony Framework][15] page to find a replacement
 that fits you best.
-
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
 
 For details on how to download and get started with Symfony, see the
 [Installation][1] chapter of the Symfony Documentation.
