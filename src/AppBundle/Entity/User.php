@@ -51,7 +51,14 @@ class User implements UserInterface
 
     private $plainPassword;
 
-    private $roles;
+    /**
+     * @var array
+     * 
+     * @ORM\Column(name="roles", type="json_array", nullable=true)
+     */
+    private $roles = [];
+
+
     /**
      * Get id
      *
@@ -146,15 +153,30 @@ class User implements UserInterface
 
     public function getSalt()
     {
-        // The bcrypt and argon2i algorithms don't require a separate salt.
-        // You *may* need a real salt if you choose a different encoder.
         return null;
     }
 
-    public function getRoles()
+    /**
+     * Get roles.
+     *
+     * @return array|null
+     */
+    public function getRoles(): ?array
     {
-        return ['ROLE_USER'];
+        return $this->roles;
     }
+
+    /**
+     * Set roles
+     *
+     * @param array|null $roles
+     */
+    public function setRoles(?array $roles): void
+    {
+        $this->roles = $roles;
+    }
+
+
 
     public function eraseCredentials()
     {

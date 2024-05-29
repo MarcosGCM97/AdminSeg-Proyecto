@@ -4,3 +4,6 @@ app_product:
 app_category:
     resource: "@AppBundle/Resources/config/routing/category.yml"
     prefix:   /category   
+app_user:
+    resource: "@AppBundle/Resources/config/routing/user.yml"
+    prefix:   /user 

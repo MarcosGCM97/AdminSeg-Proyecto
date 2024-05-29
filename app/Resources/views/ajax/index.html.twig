@@ -9,28 +9,31 @@
 
 {% endblock %}
 {% block content %}
+    {{ parent() }}
+    <div style="width: 100vw;">
+        <div style="display: flex; justify-content:center; align-items:center; column-gap: 30px; width: 90%; margin-bottom: 20px;">
+            <form style="display: flex; justify-content:center; align-items:center; flex-direction: column;">
+                <label for="input_text">Search by name</label>
+                <input id="input_text" type="text" placeholder="Green, Blue, Yellow...">
+            </form>
+            <form id="form_categories"  style="display: flex; justify-content:center; align-items:center; flex-direction: column; row-gap:5px;">
+                <label>Search by category</label>
+                {{ form_start(formProduct) }}
+                {{ form_widget(formProduct) }}
 
-    <center>
-        <h1>Listado de Zapatillas</h1>
-        <h1>Ajax Post</h1>
-        <form>
-            <label for="input_text">Search by name</label>
-            <input id="input_text" type="text" placeholder="Green, Blue, Yellow...">
-        </form>
-        <form id="form_categories">
-            <label>Search by category</label>
-            {{ form_start(formProduct) }}
-            {{ form_widget(formProduct) }}
-            {{ form_end(formProduct) }}
-        </form>
-        <div id="resultado2">
+                <button type="submit" style="background-color: rgb(185, 152, 110); color:white; border-radius:10px; border: none; font-weight: 600;">Search</button>
+                {{ form_end(formProduct) }}
+            </form>
+        </div>
+        <div id="resultado2" style="display: flex; flex-wrap:wrap;  gap:20px">
             {% for product in products %}
-                <center>
-                    <img src="{{ product.image }}" alt="{{ product.name }}" width="200">
-                    <p>{{ product.name }} - tipo: {{ product.category.name }}<img src="{{ product.category.icon }}" alt="{{ product.name }}" width="30"></p>
+                <center style="display: flex; flex-direction:column; border: 2px rgba(128, 128, 128, 0.616) solid; border-radius: 10px;">
+                    <img src="{{ product.image }}" alt="{{ product.name }}" width="200" style="border-radius: 10px 10px 0 0;">
+                    <p>{{ product.name }} </p><p> tipo: {{ product.category.name }}<img src="{{ product.category.icon }}" alt="{{ product.name }}" width="30" style="border-radius: 10px;"></p>
                 </center>
-            {% endfor %}</div>
-    </center>
+            {% endfor %}
+        </div>
+    </div>
 
 {% endblock %}
 {% endblock %}

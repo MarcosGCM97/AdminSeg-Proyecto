@@ -17,7 +17,7 @@ $(document).ready(function(){
                 response.forEach(prod => {
                     let content = `
                             <center>
-                                <img src="${prod.image}" alt="${prod.name}" width="200">
+                                <img src="${prod.image}" alt="${prod.name}" width="180">
                                 <p>${prod.name} - tipo: ${prod.category}<img src="${prod.icon}" alt="${prod.name}" width="30"></p>
                             </center>
                         `;

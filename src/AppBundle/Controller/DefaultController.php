@@ -36,13 +36,11 @@ class DefaultController extends Controller
         $formBuilder = $this->createFormBuilder($formProduct)
             ->add('name', ChoiceType::class, [
                 'choices' => [
-                    'All Shoes' => 'All Shoes',
                     'Casual Sneaker' => 'Casual Sneaker',
                     'Sport' => 'Sport',
                     'Stylish' => 'Stylish',
                 ]
-            ])
-            ->add('Submit', SubmitType::class);
+                ]);
         $form = $formBuilder->getForm();
 
         $formProductData = $request->request->get('form');

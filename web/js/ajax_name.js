@@ -15,7 +15,7 @@ function ajax_post(){
                 
                 data.forEach(prod => {
                     let content = `<center>
-                            <img src="${prod.image}" alt="${prod.name}" width="200">
+                            <img src="${prod.image}" alt="${prod.name}" width="180">
                             <p>${prod.name} - tipo: ${prod.category.name}<img src="${prod.category.icon}" alt="${prod.name}" width="30"></p>
                         </center>`
                     
@@ -27,7 +27,7 @@ function ajax_post(){
                     
                     if($("#input_text").val() != ''){
                         let content = `<div>    
-                                <img src="${prod.image}" width="200">
+                                <img src="${prod.image}" width="180">
                                 <p>${prod.name}</p>
                                 <p>TIPO: ${prod.category.name}</p>
                                 <img src="${prod.category.icon}"  width="30">

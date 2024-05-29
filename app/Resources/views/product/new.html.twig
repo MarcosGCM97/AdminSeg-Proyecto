@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+{% if is_granted('ROLE_ADMIN') %}
+<center>
+
     <h1>Product creation</h1>
 
     {{ form_start(form) }}
@@ -13,4 +16,6 @@
             <a href="{{ path('product_index') }}">Back to the list</a>
         </li>
     </ul>
+</center>
+{% endif %}
 {% endblock %}

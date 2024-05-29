@@ -1,9 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-{% if is_granted('ROLE_ADMIN') %}
 <center>
-    <h1>Category creation</h1>
+    <h1>User creation</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
@@ -12,9 +11,8 @@
 
     <ul>
         <li>
-            <a href="{{ path('category_index') }}">Back to the list</a>
+            <a href="{{ path('user_index') }}">Back to the list</a>
         </li>
     </ul>
-</center>
-{% endif %}
+</center>    
 {% endblock %}
