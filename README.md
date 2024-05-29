@@ -7,16 +7,16 @@ He logrado finalizar todos los puntos de las actividades correspondientes con la
 la cual me parece bastante abarcativa e interesante. Espero este proyecto cuampla con sus expectativas y a continuacion
 les dejo algunos puntos que les interesara tener en cuenta:
 
-USUARIO
+USUARIO -
 Deje creado un usuario con el mail ficticio 'adminseg@mail.com' y contraseña '123456'
 con el rol de 'ROLE_ADMIN' para que pueda ingresar a las secciones privadas de la pagina.
 
-BASE DE DATOS
+BASE DE DATOS -
 la base de datos esta cargada en mi repositorio de Github baje el nombre de 'ADMINSEG-DB',
 archivo el cual debe tener la tabla creada con los productos ya a su disposicion,
 es la primera vez que exporto una base de datos, si tiene problemas con ella no dude en avisarme.
 
-ESTILOS Css
+ESTILOS Css -
 Sobre este tema, vera que me anime a jugar un poco con la implementacion de bootstrap en este proyecto
 y no obtuve el resultado que esperaba, al momento de implementar estilos al componente creado desde js 
 fue lo que no pude resolver, pero lo cual ya me estoy poniendo a investigar;
