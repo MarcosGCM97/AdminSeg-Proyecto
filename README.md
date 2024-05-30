@@ -16,12 +16,6 @@ la base de datos esta cargada en mi repositorio de Github baje el nombre de 'ADM
 archivo el cual debe tener la tabla creada con los productos ya a su disposicion,
 es la primera vez que exporto una base de datos, si tiene problemas con ella no dude en avisarme.
 
-ESTILOS Css -
-Sobre este tema, vera que me anime a jugar un poco con la implementacion de bootstrap en este proyecto
-y no obtuve el resultado que esperaba, al momento de implementar estilos al componente creado desde js 
-fue lo que no pude resolver, pero lo cual ya me estoy poniendo a investigar;
-aun asi creo que quedo prolijo a la vista.
-
 
 Saludos.
 
