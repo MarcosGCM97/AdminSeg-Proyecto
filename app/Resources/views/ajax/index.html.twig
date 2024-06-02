@@ -1,15 +1,17 @@
 
 {% extends 'base.html.twig' %}
 {% block home %}
+<link href="{{ asset('css/styles.css' )}}" rel="stylesheet" />
 {% block javascript %}
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 
-    <script src="{{ asset("js/ajax_name.js") }}"></script>
-    <script src="{{ asset("js/ajax_category.js") }}"></script>
+    <script src="{{ asset("js/ajax_name.js") }}">
+    </script>
+    <script src="{{ asset("js/ajax_category.js") }}">
+    </script>
 
 {% endblock %}
 {% block content %}
-    {{ parent() }}
     <div style="width: 100vw;">
         <div style="display: flex; justify-content:center; align-items:center; column-gap: 30px; width: 90%; margin-bottom: 20px;">
             <form style="display: flex; justify-content:center; align-items:center; flex-direction: column;">
@@ -27,10 +29,21 @@
         </div>
         <div id="resultado2" style="display: flex; flex-wrap:wrap;  gap:20px">
             {% for product in products %}
-                <center style="display: flex; flex-direction:column; border: 2px rgba(128, 128, 128, 0.616) solid; border-radius: 10px;">
-                    <img src="{{ product.image }}" alt="{{ product.name }}" width="200" style="border-radius: 10px 10px 0 0;">
-                    <p>{{ product.name }} </p><p> tipo: {{ product.category.name }}<img src="{{ product.category.icon }}" alt="{{ product.name }}" width="30" style="border-radius: 10px;"></p>
-                </center>
+            <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Product image-->
+                <img class="card-img-top" src="{{ product.image }}" alt="{{ product.name }}" width="180" />
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">{{ product.name }}</h5>
+                        <!-- Product price-->
+                        tipo: {{ product.category.name }}<img src="{{ product.category.icon }}" alt="{{ product.name }}" width="30">
+                    </div>
+                </div>
+            </div>
+            </div>
             {% endfor %}
         </div>
     </div>

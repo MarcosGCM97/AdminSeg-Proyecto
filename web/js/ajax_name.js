@@ -13,25 +13,47 @@ function ajax_post(){
 
             if($('#resultado2').empty()){
                 
-                data.forEach(prod => {
-                    let content = `<center>
-                            <img src="${prod.image}" alt="${prod.name}" width="180">
-                            <p>${prod.name} - tipo: ${prod.category.name}<img src="${prod.category.icon}" alt="${prod.name}" width="30"></p>
-                        </center>`
+                data.forEach(product => {
+                    let content = `
+                    <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="${product.image}" alt="${product.name}" width='180' />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">${product.name}</h5>
+                                <!-- Product price-->
+                                tipo: ${product.category.name}<img src="${product.category.icon}" alt="${product.name}" width="30">
+                            </div>
+                        </div>
+                    </div>    
+                    </div>`
                     
                     $("#resultado2").append(content)
                 })
             } else {
                 
-                data.forEach(prod => {
+                data.forEach(product => {
                     
                     if($("#input_text").val() != ''){
-                        let content = `<div>    
-                                <img src="${prod.image}" width="180">
-                                <p>${prod.name}</p>
-                                <p>TIPO: ${prod.category.name}</p>
-                                <img src="${prod.category.icon}"  width="30">
-                            <div>`
+                        let content = `
+                        <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="${product.image}" alt="${product.name}" width='180' />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">${product.name}</h5>
+                                    <!-- Product price-->
+                                    tipo: ${product.category.name}<img src="${product.category.icon}" alt="${product.name}" width="30">
+                                </div>
+                            </div>
+                        </div>    
+                        </div>`
                         
                         $("#resultado2").append(content)
                     }

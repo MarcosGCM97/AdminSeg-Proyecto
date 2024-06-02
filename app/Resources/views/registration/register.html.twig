@@ -2,15 +2,15 @@
 {% extends "base.html.twig" %}
 
 {% block register %}
-    <div style="width: 100%; height: 200px; display:flex; justify-content:center; align-items:center; flex-direction:column; row-gap: 10px;">
+    <div style="width: 100%; height: 200px; display:flex; justify-content:center; align-items:center; flex-direction:column; row-gap: 10px; padding-top:50px;">
 
-        {{ form_start(form) }}
+        {{ form_start(form, {'attr': {'class': 'd-flex justify-content-center text-center row gap-2'}}) }}
         {{ form_row(form.username) }}
         {{ form_row(form.email) }}
         {{ form_row(form.plainPassword.first) }}
         {{ form_row(form.plainPassword.second) }}
 
-        <button type="submit" style="background-color: rgb(185, 152, 110); color:white; border-radius:10px; border: none; font-weight: 600;">Register!</button>
+        <button type="submit" style="background-color: rgb(185, 152, 110); color:white; border-radius:10px; border: none; font-weight: 600; width: 100px;">Register!</button>
         {{ form_end(form) }}
 
         <a href="{{ path('login') }}" style="color: black;">If you're already register click here</a>
