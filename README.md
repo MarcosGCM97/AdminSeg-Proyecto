@@ -12,7 +12,7 @@ Deje creado un usuario con el mail ficticio 'adminseg@mail.com' y contraseña '1
 con el rol de 'ROLE_ADMIN' para que pueda ingresar a las secciones privadas de la pagina.
 
 BASE DE DATOS -
-la base de datos esta cargada en mi repositorio de Github baje el nombre de 'ADMINSEG-DB',
+la base de datos esta cargada en mi repositorio de Github bajo el nombre de 'ADMINSEG-DB',
 archivo el cual debe tener la tabla creada con los productos ya a su disposicion,
 es la primera vez que exporto una base de datos, si tiene problemas con ella no dude en avisarme.
 
